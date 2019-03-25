@@ -2,8 +2,8 @@
 
 noflags() {
         echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
-    echo "Usage: mninstall"
-    echo "Example: mninstall"
+    echo "Usage: foxcoin"
+    echo "Example: foxcoin"
     echo "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄"
     exit 1
 }
