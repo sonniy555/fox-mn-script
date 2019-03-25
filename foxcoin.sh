@@ -83,19 +83,19 @@ createconf() {
         foxcoind
         message "Wait 10 seconds for daemon to load..."
         sleep 10s
-        MNPRIVKEY=$(adevplus20-cli masternode genkey)
+        MNPRIVKEY=$(foxcoin-cli masternode genkey)
         foxcoin-cli stop
         message "wait 10 seconds for deamon to stop..."
         sleep 10s
         sudo rm $CONFILE
-        message "Updating adevplus20.conf..."
+        message "Updating foxcoin.conf..."
         printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcport=5471" "rpcallowip=127.0.0.1" "externalip=$mnip:25676" "listen=1" "server=1" "daemon=1" "maxconnections=256" "masternode=1" "masternodeprivkey=$MNPRIVKEY" > $CONFILE
 
 }
 success() {
         foxcoind
         message "SUCCESS! Your Foxcoin has started. Masternode.conf setting below..."
-        message "MN $mnip:5472 $MNPRIVKEY TXHASH INDEX"
+        message "MN $mnip:25676 $MNPRIVKEY TXHASH INDEX"
         exit 0
 }
 
