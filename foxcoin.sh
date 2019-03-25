@@ -68,7 +68,7 @@ createconf() {
         #TODO: Can check for flag and skip this
         #TODO: Random generate the user and password
 
-        message "Creating adevplus20.conf..."
+        message "Creating foxcoin.conf..."
         MNPRIVKEY="66M7PXr6q8LCQdafoAwoxa927T2jowafosA7vAYAPnRMw3BYX4a"
         CONFDIR=~/.foxcoin
         CONFILE=$CONFDIR/foxcoin.conf
@@ -89,7 +89,7 @@ createconf() {
         sleep 10s
         sudo rm $CONFILE
         message "Updating foxcoin.conf..."
-        printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcport=5471" "rpcallowip=127.0.0.1" "externalip=$mnip:25676" "listen=1" "server=1" "daemon=1" "maxconnections=256" "masternode=1" "masternodeprivkey=$MNPRIVKEY" > $CONFILE
+        printf "%s\n" "rpcuser=$rpcuser" "rpcpassword=$rpcpass" "rpcport=25675" "rpcallowip=127.0.0.1" "externalip=$mnip:25676" "listen=1" "server=1" "daemon=1" "maxconnections=256" "masternode=1" "masternodeprivkey=$MNPRIVKEY" > $CONFILE
 
 }
 success() {
